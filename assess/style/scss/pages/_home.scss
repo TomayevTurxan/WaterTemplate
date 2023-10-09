@@ -1,0 +1,445 @@
+header {
+    padding: 50px 0px;
+
+    .menu {
+        display: none;
+    }
+
+    .contact-head {
+        display: flex;
+        justify-content: space-around;
+    }
+    @media (max-width: 992px) {
+        .contact-head {
+            display: none;
+        }
+        .menu{
+            display: block;
+            text-align: right;
+        }
+    }
+    .size-header {
+        display: flex;
+        align-items: center;
+
+        .img-logo {
+            margin-right: 50px;
+        }
+
+        .contact {
+            @include displey-center;
+
+            .icon {
+                i {
+                    @include header-icon;
+                    @include displey-center;
+                }
+            }
+
+            .contact-text {
+                p {
+                    @extend %p-size-header;
+                }
+            }
+        }
+    }
+}
+
+#nav {
+    background-color: $main-color;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    .navbar {
+        width: 50%;
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            display: flex;
+            justify-content: space-evenly;
+
+            li {
+                position: relative;
+
+                a {
+                    @include nav-a;
+                }
+
+                .a1 {
+                    &::before {
+                        @include a-before;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main {
+    padding: 0;
+    @media (min-width: 576px){
+        .head-text{
+            width: 100%;
+        }
+    }
+    .img-main {
+        position: relative;
+
+        .imgbox {
+            width: 100%;
+            height: 90vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .owerlay {
+            position: absolute;
+            width: 100%;
+            height: 90vh;
+            background-color: black;
+            top: 0;
+            opacity: .3;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 90vh;
+    }
+}
+
+.head-main {
+    position: absolute;
+    top: 35%;
+    right: 22%;
+    width: 35%;
+
+    .head-text {
+        text-align: right;
+
+        h1 {
+            @extend %h1-size;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        p:first-of-type {
+            margin: 10px 0px;
+            line-height: 25px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            margin-top: 30px;
+
+            a {
+                @include a-btn;
+
+                &:hover {
+                    background-color: #0076e9;
+                }
+            }
+        }
+    }
+}
+
+#about {
+
+    .imgbox {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .about-text {
+        padding: 10px 50px 10px 50px;
+
+        span {
+            color: $main-color;
+            font-family: italic;
+        }
+
+        h1 {
+            position: relative;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            margin-top: 10px
+        }
+
+        p {
+            @extend %p-size-header;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            margin-top: 50px;
+
+            a {
+                @include a-btn;
+            }
+        }
+    }
+}
+
+#service {
+    .service-text {
+        i {
+            font-size: 50px;
+            color: $main-color;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 10px 0px;
+        }
+
+        p {
+            @extend %p-size-header;
+        }
+    }
+
+}
+
+#rank {
+    background: linear-gradient(rgba(4, 149, 221, 0.5), rgba(4, 130, 255, 0.721)), url(https://preview.colorlib.com/theme/waterboat/images/hero_2.jpg.webp);
+    background-attachment: fixed;
+    background-size: cover;
+
+    .rank-head {
+        display: flex;
+        justify-content: space-around;
+
+        .count {
+            text-align: center;
+
+            h1 {
+                font-size: 50px;
+                color: white;
+            }
+
+            span {
+                color: white;
+            }
+        }
+    }
+}
+
+#destinations {
+    background-color: #f8f9fa;
+
+    .head {
+        @extend %head-title;
+    }
+
+    .gap {
+        gap: 10px;
+    }
+
+    .card {
+        box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.2);
+        margin: 10px 15px;
+
+        .img-card {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .card-title {
+            padding: 20px;
+
+            h3 {
+                font-size: 18px;
+
+                i {
+                    color: $main-color;
+                    margin-right: 10px;
+                }
+            }
+
+            .date {
+                @include displey-center;
+                justify-content: space-between;
+                margin-top: 15px;
+
+                .day {
+                    @include displey-center;
+
+                    i {
+                        margin-right: 10px;
+                        color: gray;
+                    }
+
+                    p {
+                        @extend %p-size-header;
+                    }
+                }
+
+                .btn {
+                    @include a-btn;
+                    border-radius: 4px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+
+#team {
+    .head {
+        @extend %head-title;
+    }
+
+    .person {
+        @include displey-center;
+        flex-direction: column;
+
+        .img-box {
+            width: 70%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                transition: .5s;
+            }
+
+            img:hover {
+                transform: scale(1.2);
+            }
+
+            .socials {
+                position: absolute;
+                bottom: 10%;
+                left: 8%;
+
+                ul {
+                    li {
+                        a {
+                            display: block;
+                            margin-bottom: 10px;
+                            width: 40px;
+                            height: 40px;
+                            background: #fff;
+                            @include displey-center;
+                            transition: .4s;
+
+                            &:hover {
+                                background-color: black;
+
+                                i {
+                                    color: white;
+                                }
+                            }
+
+                            i {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .person-title {
+        margin-top: 15px;
+        text-align: center;
+
+        h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        span {
+            color: #1089ff;
+            font-weight: 500;
+        }
+    }
+}
+
+
+#touch {
+    padding: 5em 0;
+    background: linear-gradient(rgba(4, 149, 221, 0.5), rgba(4, 130, 255, 0.721)), url(https://preview.colorlib.com/theme/waterboat/images/hero_2.jpg.webp);
+    background-attachment: fixed;
+    background-size: cover;
+
+    .touch-title {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+    }
+
+    .btn {
+        margin-top: 40px;
+
+        a {
+            @include a-btn;
+        }
+    }
+}
+
+#footer {
+    padding: 60px 20px;
+
+    a {
+        color: $main-color;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-title {
+        p {
+            @extend %p-size-header;
+            margin: 15px 0px;
+            font-size: 1rem;
+        }
+    }
+
+    .our-service {
+        span {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #1089ff;
+        }
+
+        ul {
+            li {
+                margin: 15px 0px;
+            }
+        }
+    }
+}

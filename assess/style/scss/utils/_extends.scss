@@ -1,0 +1,53 @@
+%p-size-header {
+    line-height: 1.7;
+    color: gray;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+%h1-size {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+%span-title {
+    color: #1089ff;
+    font-family: italic;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+%h3-title {
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+%h3-title-after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 46%;
+    width: 50px;
+    height: 2px;
+    background: #1089ff;
+}
+
+%head-title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+    span {
+        @extend %span-title;
+    }
+
+    h3 {
+        @extend %h3-title;
+
+        &::after {
+            @extend %h3-title-after;
+        }
+    }
+}
