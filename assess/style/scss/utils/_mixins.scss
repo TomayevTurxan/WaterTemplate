@@ -41,3 +41,33 @@
     transition: .5s;
 
 }
+
+@mixin bgc-img {
+    padding: 0;
+    background-image: url("https://preview.colorlib.com/theme/waterboat/images/hero_1.jpg");
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+}
+
+@mixin owerlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    top: 0;
+    opacity: .3;
+}
+
+@mixin h1-after {
+    content: "";
+    position: absolute;
+    bottom: 19px;
+    width: 10%;
+    height: 2px;
+    background: $main-color;
+    left: 0%;
+    top: 100%;
+}
